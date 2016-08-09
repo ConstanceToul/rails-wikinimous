@@ -1,0 +1,8 @@
+<p> Voici la liste des articles : </p>
+
+<% @articles.each do |article| %>
+<h3> <%= article.title %> </h3>
+<p> <%= article.content %> </p>
+<p> <%= link_to "Supprimer cet article", article_path(article), method: :delete %> </p>
+<p> <%= link_to "Modifier cet article", edit_article_path(article) %> </p>
+<% end %>
